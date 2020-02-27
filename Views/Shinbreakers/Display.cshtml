@@ -1,0 +1,29 @@
+﻿@model IEnumerable<myapp.Models.Shinbreaker>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Display</h2>
+
+
+<table class="table-bordered">
+    @foreach(var item in Model)
+    { 
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.Joke)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.FunnyLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Rating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditDisplay", new { id = item.ID })
+        </td>
+    </tr>
+    }
+</table>
+

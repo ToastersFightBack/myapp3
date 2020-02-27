@@ -1,0 +1,42 @@
+﻿@model myapp.Models.Funny
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Funny</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VeryGood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VeryGood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Headphones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Headphones)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
